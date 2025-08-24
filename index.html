@@ -6,10 +6,10 @@
 --> 
 <html> 
     <head> 
-        <title>Leonardo Brito SRe</title>         
+        <title>CoolSolutions - Especialistas em Cloud Computing</title>         
         <meta http-equiv="content-type" content="text/html; charset=utf-8"/> 
-        <meta name="description" content=""/> 
-        <meta name="keywords" content=""/> 
+        <meta name="description" content="CoolSolutions - Especialistas em Cloud Computing, DevOps, AWS, Google Cloud Platform e Microsoft Azure. Soluções personalizadas para sua empresa."/> 
+        <meta name="keywords" content="cloud computing, aws, gcp, azure, devops, kubernetes, ci/cd, infraestrutura como código"/> 
         <link href="css/theme.css" rel="stylesheet" type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'> 
         <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->         
@@ -17,6 +17,7 @@
         <script src="js/skel.min.js"></script>         
         <script src="js/skel-panels.min.js"></script>         
         <script src="js/init.js"></script>         
+        <script src="js/analytics.js"></script>         
         <noscript> 
             <link rel="stylesheet" href="css/skel-noscript.css"/> 
             <link rel="stylesheet" href="css/style.css"/> 
@@ -31,7 +32,7 @@
             <div class="container"> 
                 <!-- Logo -->                 
                 <div id="logo"> 
-                    <h1><a href="#">CoolSolutions</a></h1> 
+                    <h1><a href="index.html">CoolSolutions</a></h1> 
                 </div>                 
                 <!-- Nav -->                 
                 <nav id="nav"> 
@@ -56,7 +57,14 @@
         <!-- Banner -->         
         <div id="banner"> 
             <div class="container"> 
-</div>             
+                <div class="row">
+                    <div class="12u">
+                        <h2>Especialistas em Cloud Computing</h2>
+                        <p>Soluções personalizadas em AWS, Google Cloud Platform e Microsoft Azure</p>
+                        <a href="right-sidebar.html" class="button">Conheça Nossos Serviços</a>
+                    </div>
+                </div>
+            </div>             
         </div>         
         <!-- /Banner -->         
         <!-- Main -->         
@@ -67,37 +75,41 @@
                     <div class="3u"> 
                         <section> 
                             <header> 
-                                <h2>Devops</h2> 
+                                <h2>AWS</h2> 
                             </header>                             
-                            <p class="subtitle">Devops como implantar de forma contínua e segura ? </p> 
-                            <p><a href="#"><img src="images/pics13.jpg" alt=""></a></p> <a href="#" class="button">Mais</a> 
+                            <p class="subtitle">Infraestrutura escalável e serviços gerenciados da Amazon Web Services</p> 
+                            <p><a href="right-sidebar.html#aws"><img src="images/pics13.jpg" alt="AWS Cloud Services"></a></p> 
+                            <a href="right-sidebar.html#aws" class="button">Saiba Mais</a> 
                         </section>                         
                     </div>                     
                     <div class="3u"> 
                         <section> 
                             <header> 
-                                <h2>Pipelines CI/CD</h2> 
+                                <h2>Google Cloud</h2> 
                             </header>                             
-                            <p class="subtitle">End to end de todos o fluxo de entrega dos seus serviços</p> 
-                            <p><a href="#"><img src="images/pics14.jpg" alt=""></a></p> <a href="#" class="button">Mais</a> 
+                            <p class="subtitle">Plataforma de nuvem do Google com IA/ML e análise de dados avançada</p> 
+                            <p><a href="right-sidebar.html#gcp"><img src="images/pics14.jpg" alt="Google Cloud Platform"></a></p> 
+                            <a href="right-sidebar.html#gcp" class="button">Saiba Mais</a> 
                         </section>                         
                     </div>                     
                     <div class="3u"> 
                         <section> 
                             <header> 
-                                <h2>Kubernetes</h2> 
+                                <h2>Microsoft Azure</h2> 
                             </header>                             
-                            <p class="subtitle">Migração , implantação , sustentação do seu cluster k8s</p> 
-                            <p><a href="#"><img src="images/pics15.jpg" alt=""></a></p> <a href="#" class="button">Mais</a> 
+                            <p class="subtitle">Soluções híbridas e integração com ecossistema Microsoft</p> 
+                            <p><a href="right-sidebar.html#azure"><img src="images/pics15.jpg" alt="Microsoft Azure"></a></p> 
+                            <a href="right-sidebar.html#azure" class="button">Saiba Mais</a> 
                         </section>                         
                     </div>                     
                     <div class="3u"> 
                         <section> 
                             <header> 
-                                <h2>IaC</h2> 
+                                <h2>DevOps & IaC</h2> 
                             </header>                             
-                            <p class="subtitle">Criar um padrão de infraestrurura como codigo para seus recursos.</p> 
-                            <p><a href="#"><img src="images/pics16.jpg" alt=""></a></p> <a href="#" class="button">Mais</a> 
+                            <p class="subtitle">Automação, CI/CD e infraestrutura como código para todas as plataformas</p> 
+                            <p><a href="right-sidebar.html#devops"><img src="images/pics16.jpg" alt="DevOps Infrastructure"></a></p> 
+                            <a href="right-sidebar.html#devops" class="button">Saiba Mais</a> 
                         </section>                         
                     </div>                     
                 </div>                 
@@ -110,21 +122,27 @@
             <div class="container"> 
                 <div class="row"> 
                     <section class="4u"> 
-                        <div class="box"> <a href="#" class="image left"><img src="images/pics04.jpg" alt=""></a> 
-                            <h3>Etiam posuere augue</h3> 
-                            <p>Donec nonummy magna quis risus eleifend. </p> <a href="#" class="button">More</a> 
+                        <div class="box"> 
+                            <a href="right-sidebar.html#kubernetes" class="image left"><img src="images/pics04.jpg" alt="Kubernetes"></a> 
+                            <h3>Kubernetes & Containers</h3> 
+                            <p>Orquestração de containers, migração e sustentação de clusters K8s em qualquer nuvem.</p> 
+                            <a href="right-sidebar.html#kubernetes" class="button">Saiba Mais</a> 
                         </div>                         
                     </section>                     
                     <section class="4u"> 
-                        <div class="box"> <a href="#" class="image left"><img src="images/pics05.jpg" alt=""></a> 
-                            <h3>Etiam posuere augue</h3> 
-                            <p>Donec nonummy magna quis risus eleifend. </p> <a href="#" class="button">More</a> 
+                        <div class="box"> 
+                            <a href="right-sidebar.html#cicd" class="image left"><img src="images/pics05.jpg" alt="CI/CD Pipeline"></a> 
+                            <h3>Pipelines CI/CD</h3> 
+                            <p>Automação completa do fluxo de entrega com integração contínua e deploy contínuo.</p> 
+                            <a href="right-sidebar.html#cicd" class="button">Saiba Mais</a> 
                         </div>                         
                     </section>                     
                     <section class="4u"> 
-                        <div class="box"> <a href="#" class="image left"><img src="images/pics06.jpg" alt=""></a> 
-                            <h3>Etiam posuere augue</h3> 
-                            <p>Donec nonummy magna quis risus eleifend. </p> <a href="#" class="button">More</a> 
+                        <div class="box"> 
+                            <a href="right-sidebar.html#monitoring" class="image left"><img src="images/pics06.jpg" alt="Monitoring & Observability"></a> 
+                            <h3>Monitoramento & Observabilidade</h3> 
+                            <p>Soluções de monitoramento, logging e alertas para todas as plataformas cloud.</p> 
+                            <a href="right-sidebar.html#monitoring" class="button">Saiba Mais</a> 
                         </div>                         
                     </section>                     
                 </div>                 
@@ -132,5 +150,9 @@
             </div>             
         </div>         
         <!-- /Featured -->         
+        <!-- Copyright -->         
+        <div id="copyright" class="container"> 
+            <p>&copy; 2024 CoolSolutions. Todos os direitos reservados. | <a href="no-sidebar.html">Entre em Contato</a></p>
+        </div>         
     </body>     
 </html>
