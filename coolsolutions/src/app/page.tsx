@@ -39,6 +39,13 @@ export default function HomePage() {
                   { src: '/logos/kubernetes-gray.svg', alt: 'Kubernetes' },
                   { src: '/logos/terraform-gray.svg', alt: 'Terraform' },
                   { src: '/logos/githubactions-gray.svg', alt: 'GitHub Actions' },
+                  { src: '/logos/ingresse-gray.svg', alt: 'Ingresse' },
+                  { src: '/logos/suitecred-gray.svg', alt: 'Suitecred' },
+                  { src: '/logos/abu-consultoria-gray.svg', alt: 'Abu Consultoria' },
+                  { src: '/logos/garage-im-gray.svg', alt: 'garage.im' },
+                  { src: '/logos/operarock-gray.svg', alt: 'OperaRock' },
+                  { src: '/logos/vivo-gray.svg', alt: 'Vivo' },
+                  { src: '/logos/sony-gray.svg', alt: 'Sony' },
                 ]} />
               </Card>
             </FadeIn>
