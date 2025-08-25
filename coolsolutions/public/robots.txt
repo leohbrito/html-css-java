@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://coolsolutions.com.br/sitemap.xml
