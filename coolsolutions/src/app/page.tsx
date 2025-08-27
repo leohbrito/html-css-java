@@ -33,19 +33,11 @@ export default function HomePage() {
               <Card className="p-8">
                 <p className="text-neutral-900 font-semibold mb-3">Parceiros</p>
                 <LogoCloud logos={[
-                  { src: '/logos/aws-gray.svg', alt: 'AWS' },
-                  { src: '/logos/gcp-gray.svg', alt: 'GCP' },
-                  { src: '/logos/azure-gray.svg', alt: 'Azure' },
-                  { src: '/logos/kubernetes-gray.svg', alt: 'Kubernetes' },
-                  { src: '/logos/terraform-gray.svg', alt: 'Terraform' },
-                  { src: '/logos/githubactions-gray.svg', alt: 'GitHub Actions' },
-                  { src: '/logos/ingresse-gray.svg', alt: 'Ingresse' },
-                  { src: '/logos/suitecred-gray.svg', alt: 'Suitecred' },
                   { src: '/logos/abu-consultoria-gray.svg', alt: 'Abu Consultoria' },
-                  { src: '/logos/garage-im-gray.svg', alt: 'garage.im' },
-                  { src: '/logos/operarock-gray.svg', alt: 'OperaRock' },
-                  { src: '/logos/vivo-gray.svg', alt: 'Vivo' },
-                  { src: '/logos/sony-gray.svg', alt: 'Sony' },
+                  { src: '/logos/alelo-gray.svg', alt: 'Alelo' },
+                  { src: '/logos/suitecred-gray.svg', alt: 'SuiteCred.io' },
+                  { src: '/logos/ingresse-gray.svg', alt: 'Ingresse.com' },
+                  { src: '/logos/garage-im-gray.svg', alt: 'Garagem.im' },
                 ]} />
               </Card>
             </FadeIn>
