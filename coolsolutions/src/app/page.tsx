@@ -33,11 +33,11 @@ export default function HomePage() {
               <Card className="p-8">
                 <p className="text-neutral-900 font-semibold mb-3">Parceiros</p>
                 <LogoCloud logos={[
-                  { src: '/logos/abu-consultoria-gray.svg', alt: 'Abu Consultoria' },
-                  { src: '/logos/alelo-gray.svg', alt: 'Alelo' },
-                  { src: '/logos/suitecred-gray.svg', alt: 'SuiteCred.io' },
-                  { src: '/logos/ingresse-gray.svg', alt: 'Ingresse.com' },
                   { src: '/logos/garage-im-gray.svg', alt: 'Garagem.im' },
+                  { src: '/logos/alelo-gray.svg', alt: 'Alelo.com.br' },
+                  { src: '/logos/abu-consultoria-gray.svg', alt: 'Abconsultoria.com.br' },
+                  { src: '/logos/suitecred-gray.svg', alt: 'Suitecred.com.br' },
+                  { src: '/logos/ingresse-gray.svg', alt: 'Ingresse.com.br' },
                 ]} />
               </Card>
             </FadeIn>
