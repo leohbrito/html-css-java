@@ -35,12 +35,15 @@ export function FadeIn({ children, delay = 0 }: { children: React.ReactNode; del
 
 export function LogoCloud({ logos }: { logos: { src: string; alt: string }[] }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      {logos.map((logo) => (
-        <div key={logo.alt} className="flex items-center justify-center p-2">
-          <span className="text-neutral-700 font-light text-center text-sm md:text-base">
+    <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
+      {logos.map((logo, index) => (
+        <div key={logo.alt} className="relative flex items-center">
+          <span className="text-neutral-500 font-light text-sm tracking-wide">
             {logo.alt}
           </span>
+          {index < logos.length - 1 && (
+            <span className="hidden sm:inline-block ml-8 text-neutral-300">•</span>
+          )}
         </div>
       ))}
     </div>
