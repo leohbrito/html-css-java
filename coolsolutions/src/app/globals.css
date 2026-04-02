@@ -3,86 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background: #f3f1eb;
-  --foreground: #121212;
-  --surface: rgba(255, 255, 255, 0.76);
-  --surface-strong: rgba(255, 255, 255, 0.94);
-  --border: rgba(18, 18, 18, 0.1);
-  --muted: #5f5a52;
-  --accent: #0f3d2e;
-  --accent-soft: #e2ece7;
+  --background: #ffffff;
+  --foreground: #0F172A;
 }
 
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-html {
-  background:
-    radial-gradient(circle at top left, rgba(15, 61, 46, 0.08), transparent 28%),
-    linear-gradient(180deg, #f5f2ea 0%, #f2efe8 52%, #ece8df 100%);
-}
-
 body {
-  font-family: var(--font-manrope), system-ui, -apple-system, Segoe UI, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
   color: var(--foreground);
   background: var(--background);
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgba(15, 61, 46, 0.08), transparent 28%),
-    linear-gradient(180deg, #f5f2ea 0%, #f2efe8 52%, #ece8df 100%);
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(18, 18, 18, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(18, 18, 18, 0.025) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 92%);
-}
-
+/* Focus ring */
 :is(a, button, input, textarea, select):focus-visible {
-  outline: 2px solid #0f3d2e;
+  outline: 2px solid #0B5FFF;
   outline-offset: 2px;
 }
 
-a {
-  text-decoration-thickness: 1px;
-}
-
-::selection {
-  background: rgba(15, 61, 46, 0.16);
-}
-
+/* Utilities */
 .container-responsive {
-  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
-}
-
-.eyebrow {
-  font-family: var(--font-plex-mono), monospace;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.panel {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(18px);
-}
-
-.panel-strong {
-  background: var(--surface-strong);
-  border: 1px solid rgba(18, 18, 18, 0.12);
-}
-
-.balanced-title {
-  text-wrap: balance;
-}
-
-.muted-copy {
-  color: var(--muted);
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
 }
