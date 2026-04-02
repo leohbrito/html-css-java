@@ -1,72 +1,88 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import { Section, Card } from '@/components/ui'
+import { Section, Card, KPI } from '@/components/ui'
 
 export const metadata = { title: 'Sobre' }
+
+const principles = [
+  'Clareza técnica antes de velocidade aparente.',
+  'Arquitetura orientada por operação real, não por apresentação.',
+  'Automação como disciplina, não como ornamento.',
+  'Documentação, observabilidade e governança desde o início.',
+]
 
 export default function SobrePage() {
   return (
     <div>
       <Header />
       <main>
-        <Section>
-          <h1 className="text-3xl font-semibold text-neutral-900 mb-6">Sobre — Nossa História</h1>
-          <div className="prose max-w-none text-neutral-700">
-            <p>Com 12 anos de atuação, a CoolSolutions entrega projetos sob medida em Cloud Computing, Kubernetes, DevOps e Infraestrutura como Código. Planejamos, implementamos e operamos ambientes robustos, escaláveis e seguros para empresas que exigem alta disponibilidade.</p>
+        <Section className="pb-10 pt-10 md:pt-14">
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <p className="eyebrow text-[10px] text-[var(--muted)]">Sobre a CoolSolutions</p>
+              <h1 className="balanced-title mt-4 max-w-4xl text-4xl font-semibold tracking-[-0.06em] text-[var(--foreground)] md:text-6xl">
+                Uma consultoria de engenharia focada em plataformas estáveis, legíveis e sustentáveis.
+              </h1>
+            </div>
+            <p className="max-w-xl text-base leading-8 text-[var(--muted)]">
+              Com 12 anos de atuação, a CoolSolutions apoia empresas que precisam organizar fundações cloud,
+              modernizar esteiras e estruturar operação com menos fricção. O posicionamento é simples:
+              atuar com senioridade, escopo claro e responsabilidade de ponta a ponta.
+            </p>
           </div>
         </Section>
+
+        <Section className="py-0">
+          <div className="grid gap-5 md:grid-cols-3">
+            <KPI value="12+" label="anos combinando arquitetura, operação e modernização." />
+            <KPI value="Cloud" label="profundidade prática em AWS, GCP e Azure." />
+            <KPI value="DevOps" label="plataformas, pipelines, IaC e disciplina operacional." />
+          </div>
+        </Section>
+
         <Section>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-6">
-              <h2 className="font-semibold text-neutral-900 mb-2">Nossa Missão</h2>
-              <p className="text-neutral-700">Transformar a infraestrutura de TI dos clientes com soluções em nuvem que entregam agilidade, segurança e redução de custos.</p>
+          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <Card className="rounded-[2rem] p-7 md:p-8">
+              <p className="eyebrow text-[10px] text-[var(--muted)]">Missão</p>
+              <p className="mt-5 text-2xl font-semibold tracking-[-0.04em] text-[var(--foreground)]">
+                Transformar ambientes complexos em operações mais previsíveis, seguras e alinhadas ao negócio.
+              </p>
+              <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
+                O objetivo não é só entregar componentes técnicos. É deixar estrutura, critério e meios para que a plataforma continue evoluindo com menos dependência de ações emergenciais.
+              </p>
             </Card>
-            <Card className="p-6 md:col-span-2">
-              <h2 className="font-semibold text-neutral-900 mb-2">Nossos Valores</h2>
-              <ul className="list-disc pl-5 text-neutral-700 space-y-1">
-                <li>Excelência Técnica — melhores práticas e padrões de mercado.</li>
-                <li>Inovação — tecnologia a favor do negócio.</li>
-                <li>Compromisso — foco em resultados.</li>
-                <li>Transparência — comunicação clara e honesta.</li>
-                <li>Colaboração — trabalho em parceria, de ponta a ponta.</li>
+            <Card className="rounded-[2rem] p-7 md:p-8">
+              <p className="eyebrow text-[10px] text-[var(--muted)]">Princípios</p>
+              <ul className="mt-5 space-y-4">
+                {principles.map((principle) => (
+                  <li key={principle} className="border-b border-[rgba(18,18,18,0.08)] pb-4 text-base leading-7 text-[var(--foreground)] last:border-b-0 last:pb-0">
+                    {principle}
+                  </li>
+                ))}
               </ul>
             </Card>
           </div>
         </Section>
-        <Section>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-6">
-              <h3 className="font-semibold text-neutral-900 mb-2">Nossa Especialização</h3>
-              <ul className="list-disc pl-5 text-neutral-700 space-y-1">
-                <li>AWS — líder global de nuvem.</li>
-                <li>Google Cloud (GCP) — IA/ML e dados em escala.</li>
-                <li>Microsoft Azure — soluções híbridas e integração Microsoft.</li>
-              </ul>
-            </Card>
-            <Card className="p-6">
-              <h3 className="font-semibold text-neutral-900 mb-2">Nossas Competências</h3>
-              <ul className="list-disc pl-5 text-neutral-700 space-y-1">
-                <li>DevOps & CI/CD — automação ponta a ponta.</li>
-                <li>Kubernetes — orquestração de contêineres e microsserviços.</li>
-                <li>Infra como Código — Terraform, CloudFormation, ARM.</li>
-                <li>Observabilidade — métricas, logs e tracing.</li>
-                <li>Segurança — boas práticas e hardening.</li>
-                <li>Migração para Nuvem — estratégia e execução.</li>
-              </ul>
-            </Card>
-          </div>
-        </Section>
-        <Section>
-          <Card className="p-6">
-            <h3 className="font-semibold text-neutral-900 mb-2">Por que escolher a CoolSolutions?</h3>
-            <ul className="list-disc pl-5 text-neutral-700 space-y-1">
-              <li>Experiência Comprovada — 12 anos e centenas de entregas.</li>
-              <li>Certificações — equipe com selos oficiais.</li>
-              <li>Suporte 24×7 — disponibilidade real.</li>
-              <li>Metodologia Ágil — entregas incrementais.</li>
-              <li>Parcerias Estratégicas — AWS, Google e Microsoft.</li>
-            </ul>
-            <p className="text-neutral-600 mt-4 text-sm">Disclaimer<br/>Cada projeto tem particularidades que impactam resultados. As soluções são personalizadas considerando infraestrutura, escopo e objetivos. Reforçamos nosso compromisso com transparência, qualidade e boas práticas.</p>
+
+        <Section className="pt-0">
+          <Card className="rounded-[2rem] p-7 md:p-8">
+            <p className="eyebrow text-[10px] text-[var(--muted)]">Especialização</p>
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
+              <div>
+                <h2 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--foreground)]">Arquitetura e plataforma</h2>
+                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+                  Landing zones, redes, segurança, identidade, padrões de provisionamento, GitOps,
+                  esteiras de entrega, Kubernetes e observabilidade.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--foreground)]">Operação e evolução</h2>
+                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+                  Sustentação, troubleshooting, hardening, otimização de custos, revisão de arquitetura,
+                  melhorias incrementais e suporte a ambientes críticos.
+                </p>
+              </div>
+            </div>
           </Card>
         </Section>
       </main>

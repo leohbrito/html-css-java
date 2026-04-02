@@ -23,32 +23,32 @@ export function ContactForm() {
   }
 
   return (
-    <div className="rounded-2xl border border-neutral-200 p-6 bg-white shadow-soft">
+    <div className="panel rounded-[2rem] p-6 md:p-8">
       <form onSubmit={handleSubmit} noValidate>
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-neutral-900">Nome</label>
-            <input id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required className="mt-1 w-full rounded-xl border border-neutral-200 px-3 py-2 focus:outline-primary" />
+            <label htmlFor="name" className="block text-sm font-medium text-[var(--foreground)]">Nome</label>
+            <input id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required className="mt-1 w-full rounded-2xl border border-[rgba(18,18,18,0.12)] bg-[rgba(255,255,255,0.78)] px-4 py-3 text-[var(--foreground)]" />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-neutral-900">E-mail</label>
-            <input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required aria-invalid={email !== '' && !isValidEmail(email)} className="mt-1 w-full rounded-xl border border-neutral-200 px-3 py-2 focus:outline-primary" />
+            <label htmlFor="email" className="block text-sm font-medium text-[var(--foreground)]">E-mail</label>
+            <input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required aria-invalid={email !== '' && !isValidEmail(email)} className="mt-1 w-full rounded-2xl border border-[rgba(18,18,18,0.12)] bg-[rgba(255,255,255,0.78)] px-4 py-3 text-[var(--foreground)]" />
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-medium text-neutral-900">Empresa</label>
-            <input id="company" name="company" value={company} onChange={(e) => setCompany(e.target.value)} className="mt-1 w-full rounded-xl border border-neutral-200 px-3 py-2 focus:outline-primary" />
+            <label htmlFor="company" className="block text-sm font-medium text-[var(--foreground)]">Empresa</label>
+            <input id="company" name="company" value={company} onChange={(e) => setCompany(e.target.value)} className="mt-1 w-full rounded-2xl border border-[rgba(18,18,18,0.12)] bg-[rgba(255,255,255,0.78)] px-4 py-3 text-[var(--foreground)]" />
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-medium text-neutral-900">Mensagem</label>
-            <textarea id="message" name="message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} required className="mt-1 w-full rounded-xl border border-neutral-200 px-3 py-2 focus:outline-primary" />
+            <label htmlFor="message" className="block text-sm font-medium text-[var(--foreground)]">Contexto</label>
+            <textarea id="message" name="message" rows={6} value={message} onChange={(e) => setMessage(e.target.value)} required className="mt-1 w-full rounded-2xl border border-[rgba(18,18,18,0.12)] bg-[rgba(255,255,255,0.78)] px-4 py-3 text-[var(--foreground)]" />
           </div>
         </div>
         <div className="mt-4 flex items-center justify-between">
-          <button type="submit" className="rounded-2xl bg-primary px-5 py-2.5 text-white font-semibold hover:bg-primary-600">Enviar</button>
-          <a href="mailto:suporte@coolsolutions.com.br" className="text-primary hover:text-primary-600">suporte@coolsolutions.com.br</a>
+          <button type="submit" className="rounded-full bg-[var(--foreground)] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--accent)]">Enviar briefing</button>
+          <a href="mailto:suporte@coolsolutions.com.br" className="text-sm text-[var(--foreground)] underline underline-offset-4 hover:text-[var(--accent)]">suporte@coolsolutions.com.br</a>
         </div>
         {submitted && (
-          <p className="mt-3 text-sm text-neutral-600">Se o aplicativo de e-mail não abrir, envie manualmente para suporte@coolsolutions.com.br.</p>
+          <p className="mt-3 text-sm text-[var(--muted)]">Se o aplicativo de e-mail não abrir, envie manualmente para suporte@coolsolutions.com.br.</p>
         )}
       </form>
     </div>
