@@ -1,0 +1,8 @@
+{
+  "name": "CoolSolutions",
+  "short_name": "CoolSolutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f1eb",
+  "theme_color": "#121212"
+}
