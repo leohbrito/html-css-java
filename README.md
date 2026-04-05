@@ -1,6 +1,7 @@
 # CoolSolutions - Site Corporativo
 
 Site oficial da CoolSolutions, empresa especializada em Cloud Computing, DevOps e soluções tecnológicas.
+#
 
 ## 🚀 Sobre o Projeto
 
