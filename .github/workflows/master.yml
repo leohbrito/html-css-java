@@ -1,20 +1,39 @@
-on: 
+on:
   push:
     branches:
       - master
-name: 🚀 Deploy website on push
+
+name: Deploy website on push
+
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: Build and deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.ftp_endpoint }}
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
-        server-dir: public_html/workflows/
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: coolsolutions/package-lock.json
+
+      - name: Install dependencies
+        working-directory: coolsolutions
+        run: npm ci
+
+      - name: Build static site
+        working-directory: coolsolutions
+        run: npm run build
+
+      - name: Sync static export
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.ftp_endpoint }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./coolsolutions/out/
+          server-dir: public_html/
+          dangerous-clean-slate: true
