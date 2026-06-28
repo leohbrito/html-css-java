@@ -1,72 +1,34 @@
-# CoolSolutions - Site Corporativo
+# CoolSolutions
 
-Site oficial da CoolSolutions, empresa especializada em Cloud Computing, DevOps e soluções tecnológicas.
-#
+Site institucional da CoolSolutions em Next.js, TypeScript e Tailwind CSS.
 
-## 🚀 Sobre o Projeto
+O codigo-fonte principal fica em `coolsolutions/`. A versao HTML/CSS legada foi removida desta branch para evitar publicacoes acidentais do site antigo.
 
-Este repositório contém o site corporativo da CoolSolutions, desenvolvido com foco em apresentar nossos serviços especializados em:
+## Desenvolvimento
 
-- **Amazon Web Services (AWS)**
-- **Google Cloud Platform (GCP)**
-- **Microsoft Azure**
-- **DevOps & CI/CD**
-- **Kubernetes & Containers**
-- **Infraestrutura como Código**
-- **Monitoramento & Observabilidade**
+```bash
+cd coolsolutions
+npm ci
+npm run dev
+```
 
-## 🏗️ Estrutura do Site
+## Validacao
 
-- **`index.html`** - Página principal com visão geral dos serviços
-- **`left-sidebar.html`** - Página "Sobre" com informações da empresa
-- **`right-sidebar.html`** - Página de serviços detalhados
-- **`no-sidebar.html`** - Página de contato e suporte
-- **`css/`** - Arquivos de estilo e responsividade
-- **`images/`** - Imagens e recursos visuais
-- **`js/`** - Scripts JavaScript para funcionalidades
+```bash
+cd coolsolutions
+npm run test
+npm run type-check
+npm run build
+```
 
-## ✨ Funcionalidades
+## Deploy
 
-- ✅ Design responsivo para todos os dispositivos
-- ✅ Navegação intuitiva entre páginas
-- ✅ Links funcionais para todas as seções
-- ✅ SEO otimizado com meta tags apropriadas
-- ✅ Conteúdo focado em serviços de cloud computing
-- ✅ Informações de contato completas
-- ✅ Seções organizadas por especialidade técnica
+O deploy roda pelo GitHub Actions em `.github/workflows/master.yml`.
 
-## 🎯 Público-Alvo
+Fluxo:
 
-- Empresas que buscam migrar para nuvem
-- Equipes de TI que precisam de consultoria em DevOps
-- Desenvolvedores interessados em infraestrutura como código
-- Empresas que utilizam ou planejam usar AWS, GCP ou Azure
+1. instala dependencias em `coolsolutions/`;
+2. executa `npm run build`;
+3. publica o export estatico gerado em `coolsolutions/out/` via FTP para `public_html/`.
 
-## 📱 Responsividade
-
-O site é totalmente responsivo e funciona perfeitamente em:
-- Desktop e laptops
-- Tablets
-- Smartphones
-- Todos os navegadores modernos
-
-## 🚀 Como Executar
-
-1. Clone o repositório
-2. Abra o arquivo `index.html` em qualquer navegador web
-3. Navegue pelas diferentes páginas através do menu principal
-
-## 📞 Contato
-
-- **Email:** comercial@coolsolutions.com.br
-- **Suporte:** suporte@coolsolutions.com.br
-- **Portal:** suporte.coolsolutions.com.br
-- **Tickets:** tickets.coolsolutions.com.br
-
-## 📄 Licença
-
-Este projeto está sob a licença Creative Commons Attribution 3.0.
-
----
-
-**CoolSolutions** - Transformando infraestruturas através da inovação em cloud computing.
+Arquivos gerados como `coolsolutions/out/`, `.next/`, `node_modules/` e builds `_next/` nao devem ser versionados.
