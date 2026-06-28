@@ -28,6 +28,12 @@ jobs:
         working-directory: coolsolutions
         run: npm run build
 
+      - name: Verify static export
+        run: |
+          test -f coolsolutions/out/index.html
+          test -f coolsolutions/out/404.html
+          test -f coolsolutions/out/sitemap.xml
+
       - name: Sync static export
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
