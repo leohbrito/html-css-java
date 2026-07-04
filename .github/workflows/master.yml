@@ -53,6 +53,6 @@ jobs:
           set net:max-retries 2
           open -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_SERVER:22"
           mirror --reverse --only-newer --verbose ./coolsolutions/out/ public_html/
-          mirror --reverse --only-newer --verbose ./coolsolutions/out/ public_20160226/
+          mirror --reverse --only-newer --verbose ./coolsolutions/out/ public_html/workflows/
           bye
           EOF
