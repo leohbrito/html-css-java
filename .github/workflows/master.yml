@@ -45,7 +45,7 @@ jobs:
           FTP_SERVER: ${{ secrets.ftp_endpoint }}
           FTP_USERNAME: ${{ secrets.ftp_username }}
           FTP_PASSWORD: ${{ secrets.ftp_password }}
-          FTP_REMOTE_DIR: /home/institutodeapoioeap/public_html/
+          FTP_REMOTE_DIR: public_html/
         run: |
           lftp <<EOF
           set sftp:auto-confirm yes
