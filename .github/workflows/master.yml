@@ -9,6 +9,7 @@ jobs:
   web-deploy:
     name: Build and deploy
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,12 +35,14 @@ jobs:
           test -f coolsolutions/out/404.html
           test -f coolsolutions/out/sitemap.xml
 
-      - name: Sync static export
+      - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.ftp_endpoint }}
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
+          protocol: ftp
+          port: 21
           local-dir: ./coolsolutions/out/
           server-dir: public_html/
           dangerous-clean-slate: true
