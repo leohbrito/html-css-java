@@ -9,6 +9,7 @@ jobs:
   web-deploy:
     name: Build and deploy
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,22 +35,14 @@ jobs:
           test -f coolsolutions/out/404.html
           test -f coolsolutions/out/sitemap.xml
 
-      - name: Install SFTP client
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y lftp
-
-      - name: Sync static export via SFTP
-        env:
-          FTP_SERVER: ${{ secrets.ftp_endpoint }}
-          FTP_USERNAME: ${{ secrets.ftp_username }}
-          FTP_PASSWORD: ${{ secrets.ftp_password }}
-        run: |
-          lftp <<EOF
-          set sftp:auto-confirm yes
-          set net:timeout 20
-          set net:max-retries 2
-          open -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_SERVER:22"
-          mirror --reverse --delete --verbose ./coolsolutions/out/ public_html/
-          bye
-          EOF
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.ftp_endpoint }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          protocol: ftp
+          port: 21
+          local-dir: ./coolsolutions/out/
+          server-dir: public_html/
+          dangerous-clean-slate: true
