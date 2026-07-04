@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export function Section({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <section className={`py-16 ${className}`}>
+    <section className={`py-16 md:py-24 ${className}`}>
       <div className="container-responsive">{children}</div>
     </section>
   )
@@ -12,15 +12,15 @@ export function Section({ children, className = '' }: { children: React.ReactNod
 
 export function Card({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`rounded-2xl border border-neutral-200 bg-white shadow-soft ${className}`}>{children}</div>
+    <div className={`panel rounded-[2rem] ${className}`}>{children}</div>
   )
 }
 
 export function KPI({ value, label }: { value: string; label: string }) {
   return (
-    <div className="text-center">
-      <div className="text-3xl font-semibold text-neutral-900">{value}</div>
-      <div className="text-sm text-neutral-600">{label}</div>
+    <div className="rounded-[1.75rem] border border-[rgba(18,18,18,0.08)] bg-[rgba(255,255,255,0.58)] p-5 text-left">
+      <div className="text-3xl font-semibold tracking-[-0.04em] text-[var(--foreground)] md:text-4xl">{value}</div>
+      <div className="mt-2 text-sm text-[var(--muted)]">{label}</div>
     </div>
   )
 }
@@ -35,14 +35,14 @@ export function FadeIn({ children, delay = 0 }: { children: React.ReactNode; del
 
 export function LogoCloud({ logos }: { logos: { src: string; alt: string }[] }) {
   return (
-    <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
+    <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
       {logos.map((logo, index) => (
         <div key={logo.alt} className="relative flex items-center">
-          <span className="text-neutral-500 font-light text-sm tracking-wide">
+          <span className="eyebrow text-[11px] text-[var(--muted)]">
             {logo.alt}
           </span>
           {index < logos.length - 1 && (
-            <span className="hidden sm:inline-block ml-8 text-neutral-300">•</span>
+            <span className="hidden sm:inline-block ml-6 text-[rgba(18,18,18,0.24)]">/</span>
           )}
         </div>
       ))}
