@@ -45,7 +45,6 @@ jobs:
           FTP_SERVER: ${{ secrets.ftp_endpoint }}
           FTP_USERNAME: ${{ secrets.ftp_username }}
           FTP_PASSWORD: ${{ secrets.ftp_password }}
-          FTP_REMOTE_DIR: public_html/
         run: |
           lftp <<EOF
           set sftp:auto-confirm yes
@@ -53,6 +52,7 @@ jobs:
           set net:timeout 20
           set net:max-retries 2
           open -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_SERVER:22"
-          mirror --reverse --only-newer --verbose ./coolsolutions/out/ "$FTP_REMOTE_DIR"
+          mirror --reverse --only-newer --verbose ./coolsolutions/out/ public_html/
+          mirror --reverse --only-newer --verbose ./coolsolutions/out/ public_20160226/
           bye
           EOF
