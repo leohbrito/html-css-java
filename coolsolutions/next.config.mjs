@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   // Produce a fully static build for simple static hosting
   output: 'export',
+  trailingSlash: true,
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
