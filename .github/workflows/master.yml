@@ -48,6 +48,7 @@ jobs:
         run: |
           lftp <<EOF
           set sftp:auto-confirm yes
+          set sftp:connect-program "ssh -a -x -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa"
           set net:timeout 20
           set net:max-retries 2
           open -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_SERVER:22"
