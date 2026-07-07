@@ -14,146 +14,233 @@ const timeline = [
   {
     date: '30/05/2025',
     title: 'Estruturação do repositório',
-    description:
-      'Organização do repositório principal para permitir evolução colaborativa, versionamento saudável e publicação do projeto.',
+    description: 'O repositório foi limpo e preparado para continuar o projeto sem sujeira no histórico.',
     activities: [
-      'Organização do Git e correção do .gitignore.',
-      'Remoção da pasta .terraform do versionamento.',
-      'Limpeza do histórico com BFG Repo Cleaner.',
-      'Correção de arquivos que excediam o limite do GitHub.',
-      'Preparação do repositório para publicação.',
+      'Git organizado.',
+      '.gitignore corrigido.',
+      'Arquivos grandes e .terraform removidos do versionamento.',
     ],
-    status: 'Base técnica reorganizada para continuidade do desenvolvimento.',
-    nextStep: 'Manter regras de versionamento e documentar convenções do repositório.',
+    status: 'Base limpa e pronta para evoluir.',
+    nextStep: 'Manter o repositório simples e bem documentado.',
   },
   {
     date: '2025',
     title: 'Planejamento da arquitetura AWS',
-    description:
-      'Definição dos conceitos principais de arquitetura cloud para sustentar escalabilidade, segurança e separação de ambientes.',
+    description: 'A direção técnica da AWS foi definida antes de sair criando recurso sem critério.',
     activities: [
-      'Discussão de arquitetura baseada em AWS.',
-      'Definição de infraestrutura como código como diretriz.',
-      'Planejamento dos ambientes development, homologação e produção.',
-      'Levantamento de requisitos de escalabilidade, segurança e baixo custo operacional.',
+      'Arquitetura AWS definida.',
+      'Infraestrutura como código escolhida.',
+      'Ambientes dev, homologação e produção planejados.',
     ],
-    status: 'Direção arquitetural estabelecida.',
-    nextStep: 'Consolidar as decisões em um documento de arquitetura versionado.',
+    status: 'Caminho técnico definido.',
+    nextStep: 'Registrar as decisões principais em um documento curto.',
   },
   {
     date: '2025',
     title: 'Infraestrutura AWS',
-    description:
-      'Mapeamento dos serviços AWS necessários para compor a base de rede, computação, dados, DNS, observabilidade e backup.',
+    description: 'Foram escolhidos os serviços AWS necessários para a base do projeto.',
     activities: [
-      'Planejamento de VPC, EC2, RDS, S3, IAM, Route53 e Security Groups.',
-      'Discussão de CloudWatch para monitoramento.',
-      'Inclusão de AWS Backup na estratégia operacional.',
-      'Avaliação de alta disponibilidade, segurança, escalabilidade e custo.',
+      'VPC, EC2, RDS, S3, IAM, Route53 e Security Groups mapeados.',
+      'Monitoramento com CloudWatch previsto.',
+      'Backups incluídos no desenho.',
     ],
-    status: 'Componentes principais identificados.',
-    nextStep: 'Transformar o desenho em módulos Terraform por ambiente.',
+    status: 'Peças principais mapeadas.',
+    nextStep: 'Transformar o desenho em Terraform por ambiente.',
   },
   {
     date: '2025',
     title: 'Planejamento Terraform',
-    description:
-      'Definição do Terraform como base para provisionar infraestrutura versionada, reproduzível e independente por ambiente.',
+    description: 'Terraform foi escolhido para criar infraestrutura de forma repetível e controlada.',
     activities: [
-      'Planejamento de infraestrutura versionada.',
-      'Separação lógica entre ambientes.',
-      'Discussão de reprodutibilidade.',
-      'Preparação para reduzir configurações manuais.',
+      'Infraestrutura versionada planejada.',
+      'Ambientes separados.',
+      'Menos configuração manual.',
     ],
-    status: 'IaC definida como prática central do projeto.',
-    nextStep: 'Padronizar estrutura de módulos, variáveis, estados e convenções.',
+    status: 'IaC definida como padrão.',
+    nextStep: 'Padronizar módulos, variáveis e estados.',
   },
   {
     date: '2025',
     title: 'Segurança e controle de acesso',
-    description:
-      'Discussão das camadas de segurança para acesso, chaves, segregação de ambientes, backup e boas práticas de produção.',
+    description: 'Acesso, chaves e permissões foram tratados como parte central da infraestrutura.',
     activities: [
-      'Planejamento de IAM e controle de acesso.',
-      'Discussão de SSH, gerenciamento de chaves e keypairs.',
-      'Separação entre ambientes.',
-      'Boas práticas para produção e rotina de backup.',
+      'IAM e permissões planejados.',
+      'SSH e keypairs revisados.',
+      'Ambientes separados.',
     ],
-    status: 'Princípios de segurança definidos para guiar a implementação.',
-    nextStep: 'Formalizar políticas de acesso mínimo e revisar permissões por ambiente.',
+    status: 'Segurança tratada desde a base.',
+    nextStep: 'Aplicar acesso mínimo por ambiente.',
   },
   {
     date: '2025',
     title: 'Organização modular do projeto',
-    description:
-      'Discussão de uma estrutura modular para facilitar manutenção, separar responsabilidades e permitir crescimento controlado.',
+    description: 'O projeto foi pensado em partes menores para ficar mais fácil de manter.',
     activities: [
-      'Separação entre infraestrutura e aplicação.',
+      'Infraestrutura separada da aplicação.',
       'Organização por módulos.',
-      'Definição de princípios para escalabilidade e manutenção.',
-      'Alinhamento para manter código limpo e modular.',
+      'Código pensado para crescer sem virar bagunça.',
     ],
-    status: 'Modelo modular definido como referência.',
-    nextStep: 'Registrar padrões de pastas, nomes e responsabilidades no contexto do projeto.',
+    status: 'Estrutura modular definida.',
+    nextStep: 'Registrar nomes, pastas e responsabilidades.',
   },
   {
     date: '2025',
     title: 'Documentação técnica',
-    description:
-      'Início da documentação de arquitetura, infraestrutura, processos e decisões técnicas para preservar continuidade.',
+    description: 'A documentação foi iniciada para ninguém depender de memória ou conversa antiga.',
     activities: [
-      'Registro de arquitetura e infraestrutura.',
-      'Organização de processos.',
-      'Documentação de decisões técnicas.',
-      'Definição de documentação como prática contínua.',
+      'Arquitetura registrada.',
+      'Decisões técnicas anotadas.',
+      'Contexto do projeto preservado.',
     ],
-    status: 'Documentação técnica iniciada.',
-    nextStep: 'Criar um PROJECT_CONTEXT.md completo para orientar próximas sessões e implementações.',
+    status: 'Documentação iniciada.',
+    nextStep: 'Criar um PROJECT_CONTEXT.md direto e completo.',
   },
   {
     date: '12/12/2025',
     title: 'Ajustes de SSH e keypair',
-    description:
-      'Correção de acesso SSH relacionado a permissões da chave e keypair utilizada pela infraestrutura.',
+    description: 'O acesso SSH foi corrigido para a operação não travar por chave mal configurada.',
     activities: [
-      'Correção das permissões da chave SSH.',
-      'Ajuste da keypair utilizada na infraestrutura.',
-      'Revisão do acesso necessário para operação.',
+      'Permissões da chave corrigidas.',
+      'Keypair ajustada.',
+      'Acesso operacional revisado.',
     ],
-    status: 'Acesso SSH ajustado.',
-    nextStep: 'Documentar procedimento de acesso e cuidados com chaves.',
+    status: 'Acesso SSH funcionando.',
+    nextStep: 'Documentar como acessar e cuidar das chaves.',
   },
   {
     date: '27/05/2026',
     title: 'Validação dos backups AWS',
-    description:
-      'Conferência do ambiente AWS para validar planos, jobs e execução dos backups da Plataforma e da API.',
+    description: 'Os backups da Plataforma e da API foram conferidos na AWS.',
     activities: [
-      'Conferência dos planos de backup.',
-      'Validação dos jobs.',
-      'Verificação da execução.',
-      'Confirmação dos backups da Plataforma.',
-      'Confirmação dos backups da API.',
+      'Planos de backup conferidos.',
+      'Jobs validados.',
+      'Backups da Plataforma e da API confirmados.',
     ],
-    status: 'Todos os backups executando corretamente.',
-    nextStep: 'Definir rotina periódica de revisão, restauração de teste e evidências.',
+    status: 'Backups executando corretamente.',
+    nextStep: 'Criar rotina de revisão e teste de restauração.',
   },
 ]
 
 const principles = [
-  'Preservar a arquitetura existente.',
-  'Evitar quebrar compatibilidade.',
-  'Documentar mudanças importantes.',
-  'Sugerir melhorias quando houver oportunidade clara.',
-  'Manter código limpo e modular.',
-  'Explicar impactos técnicos antes de alterações estruturais.',
+  'Mudar pouco por vez.',
+  'Não quebrar o que já funciona.',
+  'Documentar decisão importante.',
+  'Manter código simples.',
 ]
 
 const nextSteps = [
-  'Criar um PROJECT_CONTEXT.md completo para a SuiteCred.',
-  'Consolidar decisões arquiteturais e regras de negócio.',
-  'Mapear backlog técnico e backlog de produto.',
-  'Revisar plano dos ambientes dev, homologação e produção.',
+  'Criar PROJECT_CONTEXT.md.',
+  'Fechar decisões de arquitetura.',
+  'Mapear backlog técnico e de produto.',
+  'Revisar ambientes dev, homologação e produção.',
+]
+
+const backlogRoadmap = [
+  {
+    quarter: 'Q3 2026',
+    focus: 'Base operacional',
+    items: [
+      'Criar painel simples de saúde da plataforma.',
+      'Definir SLOs: disponibilidade, erro e tempo de resposta.',
+      'Revisar logs, métricas e alertas críticos.',
+      'Testar restauração de backup.',
+    ],
+  },
+  {
+    quarter: 'Q4 2026',
+    focus: 'Datas fortes e clientes',
+    items: [
+      'Preparar operação para Black Friday, Natal e fechamento do ano.',
+      'Criar plano de comunicação para clientes em incidentes.',
+      'Simular aumento de requests antes de datas especiais.',
+      'Revisar capacidade de banco, API e servidores.',
+    ],
+  },
+  {
+    quarter: 'Q1 2027',
+    focus: 'Estabilidade',
+    items: [
+      'Revisar incidentes de 2026 e corrigir causas reais.',
+      'Melhorar runbooks de suporte e operação.',
+      'Criar rotina mensal de patch, backup e permissões.',
+      'Reduzir alertas falsos e barulho operacional.',
+    ],
+  },
+  {
+    quarter: 'Q2 2027',
+    focus: 'Escala',
+    items: [
+      'Planejar crescimento do número de requests.',
+      'Fazer teste de carga da API e da Plataforma.',
+      'Ajustar banco, cache e filas se o volume crescer.',
+      'Definir limite claro para escalar infraestrutura.',
+    ],
+  },
+  {
+    quarter: 'Q3 2027',
+    focus: 'Evolução da plataforma',
+    items: [
+      'Mapear melhorias de produto com impacto no cliente.',
+      'Melhorar jornada de avisos, status e suporte.',
+      'Criar backlog de performance por tela e endpoint.',
+      'Revisar custo AWS e eliminar desperdício.',
+    ],
+  },
+  {
+    quarter: 'Q4 2027',
+    focus: 'Maturidade',
+    items: [
+      'Preparar novamente Black Friday, Natal e virada de ano.',
+      'Revisar plano de continuidade e desastre.',
+      'Executar teste completo de recuperação.',
+      'Fechar plano técnico de 2028 com base em dados reais.',
+    ],
+  },
+]
+
+const maturityMatrix = [
+  {
+    area: 'Backups',
+    level: 4,
+    adherence: 80,
+    status: 'Bom',
+    note: 'Existe validação. Falta rotina fixa de restauração.',
+  },
+  {
+    area: 'Segurança',
+    level: 3,
+    adherence: 60,
+    status: 'Médio',
+    note: 'Base definida. Falta revisar acesso mínimo por ambiente.',
+  },
+  {
+    area: 'Observabilidade',
+    level: 2,
+    adherence: 40,
+    status: 'Atenção',
+    note: 'Precisa de painel, alertas úteis e SLOs simples.',
+  },
+  {
+    area: 'Escala',
+    level: 2,
+    adherence: 40,
+    status: 'Atenção',
+    note: 'Precisa testar carga e definir limite de crescimento.',
+  },
+  {
+    area: 'Documentação',
+    level: 3,
+    adherence: 60,
+    status: 'Médio',
+    note: 'Contexto iniciado. Falta PROJECT_CONTEXT.md completo.',
+  },
+  {
+    area: 'Operação',
+    level: 2,
+    adherence: 40,
+    status: 'Atenção',
+    note: 'Faltam runbooks, calendário operacional e rotina de revisão.',
+  },
 ]
 
 function BulletList({ items }: { items: string[] }) {
@@ -169,6 +256,21 @@ function BulletList({ items }: { items: string[] }) {
   )
 }
 
+function MaturityDots({ level }: { level: number }) {
+  return (
+    <div className="flex gap-1.5" aria-label={`Nível ${level} de 5`}>
+      {Array.from({ length: 5 }).map((_, index) => (
+        <span
+          key={index}
+          className={`h-2.5 w-2.5 rounded-full ${
+            index < level ? 'bg-[var(--accent)]' : 'bg-[rgba(18,18,18,0.1)]'
+          }`}
+        />
+      ))}
+    </div>
+  )
+}
+
 export default function SecretPage() {
   return (
     <div>
@@ -179,11 +281,10 @@ export default function SecretPage() {
             <div>
               <p className="eyebrow text-[10px] text-[var(--muted)]">Área interna / SuiteCred</p>
               <h1 className="balanced-title mt-4 max-w-4xl text-4xl font-semibold tracking-[-0.06em] text-[var(--foreground)] md:text-6xl">
-                Histórico de trabalho, decisões técnicas e próximos passos.
+                SuiteCred: histórico simples do que importa.
               </h1>
               <p className="muted-copy mt-6 max-w-2xl text-base leading-8">
-                Overview oculto por URL para manter continuidade sobre arquitetura, infraestrutura,
-                segurança e evolução da SuiteCred.
+                O que foi feito, o estado atual e o próximo passo. Sem enfeite.
               </p>
             </div>
             <Card className="rounded-[2rem] p-6 md:p-7">
@@ -192,8 +293,7 @@ export default function SecretPage() {
                 {timeline.length} registros
               </p>
               <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-                Conteúdo inicial reconstruído a partir do contexto disponível. Datas com apenas o ano
-                representam períodos aproximados.
+                Datas com apenas o ano são aproximadas.
               </p>
             </Card>
           </div>
@@ -239,7 +339,7 @@ export default function SecretPage() {
             <Card className="rounded-[2rem] p-6 md:p-8">
               <p className="eyebrow text-[10px] text-[var(--muted)]">Continuidade</p>
               <h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em] text-[var(--foreground)]">
-                Princípios para novas alterações.
+                Regras simples.
               </h2>
               <div className="mt-6">
                 <BulletList items={principles} />
@@ -248,12 +348,76 @@ export default function SecretPage() {
             <Card className="rounded-[2rem] p-6 md:p-8">
               <p className="eyebrow text-[10px] text-[var(--muted)]">Próximos passos sugeridos</p>
               <h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em] text-[var(--foreground)]">
-                Base para retomar SuiteCred com menos perda de contexto.
+                O que fazer agora.
               </h2>
               <div className="mt-6">
                 <BulletList items={nextSteps} />
               </div>
             </Card>
+          </div>
+        </Section>
+
+        <Section className="pt-0">
+          <div>
+            <p className="eyebrow text-[10px] text-[var(--muted)]">Matriz de maturidade</p>
+            <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-[-0.05em] text-[var(--foreground)] md:text-4xl">
+              Aderência SRE/TI da plataforma.
+            </h2>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)]">
+              Leitura rápida: o que está bom, o que está no meio e o que precisa de atenção.
+            </p>
+            <div className="mt-8 grid gap-4">
+              {maturityMatrix.map((item) => (
+                <Card key={item.area} className="rounded-[2rem] p-5 md:p-6">
+                  <div className="grid gap-5 md:grid-cols-[0.8fr_0.7fr_1fr] md:items-center">
+                    <div>
+                      <p className="text-lg font-semibold tracking-[-0.04em] text-[var(--foreground)]">
+                        {item.area}
+                      </p>
+                      <p className="mt-2 text-sm text-[var(--muted)]">{item.status}</p>
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between gap-4">
+                        <MaturityDots level={item.level} />
+                        <span className="text-sm font-semibold text-[var(--foreground)]">{item.adherence}%</span>
+                      </div>
+                      <div className="mt-3 h-2 overflow-hidden rounded-full bg-[rgba(18,18,18,0.08)]">
+                        <div
+                          className="h-full rounded-full bg-[var(--accent)]"
+                          style={{ width: `${item.adherence}%` }}
+                        />
+                      </div>
+                    </div>
+                    <p className="text-sm leading-7 text-[var(--muted)]">{item.note}</p>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </Section>
+
+        <Section className="pt-0">
+          <div>
+            <p className="eyebrow text-[10px] text-[var(--muted)]">Backlog sugerido</p>
+            <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-[-0.05em] text-[var(--foreground)] md:text-4xl">
+              Próximos quarters: 2026 e 2027.
+            </h2>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)]">
+              Propostas para manter a plataforma estável, preparada para crescer e simples de operar.
+            </p>
+            <div className="mt-8 grid gap-5 lg:grid-cols-2">
+              {backlogRoadmap.map((period) => (
+                <Card key={period.quarter} className="rounded-[2rem] p-6 md:p-8">
+                  <p className="eyebrow text-[10px] text-[var(--muted)]">{period.quarter}</p>
+                  <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em] text-[var(--foreground)]">
+                    {period.focus}
+                  </h3>
+                  <div className="mt-5">
+                    <BulletList items={period.items} />
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
         </Section>
       </main>
