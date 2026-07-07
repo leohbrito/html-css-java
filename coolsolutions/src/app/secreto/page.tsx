@@ -62,7 +62,7 @@ const timeline = [
     activities: [
       'Planejamento de infraestrutura versionada.',
       'Separação lógica entre ambientes.',
-      'Discussão de reprodutibilidade e automação.',
+      'Discussão de reprodutibilidade.',
       'Preparação para reduzir configurações manuais.',
     ],
     status: 'IaC definida como prática central do projeto.',
@@ -98,26 +98,12 @@ const timeline = [
   },
   {
     date: '2025',
-    title: 'Planejamento de CI/CD',
-    description:
-      'Discussão da necessidade de pipeline automatizado para build, testes, deploy, versionamento e padronização operacional.',
-    activities: [
-      'Levantamento de fluxo de build automático.',
-      'Planejamento de testes e validações.',
-      'Discussão de deploy automatizado.',
-      'Definição de padronização e versionamento como objetivos.',
-    ],
-    status: 'Necessidade de pipeline automatizado mapeada.',
-    nextStep: 'Desenhar pipeline por ambiente com critérios de promoção e rollback.',
-  },
-  {
-    date: '2025',
     title: 'Documentação técnica',
     description:
-      'Início da documentação de arquitetura, infraestrutura, processos, deploy e decisões técnicas para preservar continuidade.',
+      'Início da documentação de arquitetura, infraestrutura, processos e decisões técnicas para preservar continuidade.',
     activities: [
       'Registro de arquitetura e infraestrutura.',
-      'Organização de processos e deploy.',
+      'Organização de processos.',
       'Documentação de decisões técnicas.',
       'Definição de documentação como prática contínua.',
     ],
@@ -167,7 +153,6 @@ const nextSteps = [
   'Criar um PROJECT_CONTEXT.md completo para a SuiteCred.',
   'Consolidar decisões arquiteturais e regras de negócio.',
   'Mapear backlog técnico e backlog de produto.',
-  'Revisar pipeline CI/CD.',
   'Revisar plano dos ambientes dev, homologação e produção.',
 ]
 
@@ -198,7 +183,7 @@ export default function SecretPage() {
               </h1>
               <p className="muted-copy mt-6 max-w-2xl text-base leading-8">
                 Overview oculto por URL para manter continuidade sobre arquitetura, infraestrutura,
-                segurança, automação e evolução da SuiteCred.
+                segurança e evolução da SuiteCred.
               </p>
             </div>
             <Card className="rounded-[2rem] p-6 md:p-7">
