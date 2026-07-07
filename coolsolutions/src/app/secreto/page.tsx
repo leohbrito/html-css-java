@@ -1,9 +1,23 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { Card, Section } from '@/components/ui'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'SuiteCred — Overview interno',
+  description:
+    'Histórico interno da SuiteCred com arquitetura AWS, segurança, Terraform, backups e Amazon SES.',
+  keywords: ['SuiteCred', 'AWS', 'Terraform', 'Amazon SES', 'SRE', 'Cloud', 'Segurança'],
+  openGraph: {
+    title: 'SuiteCred — Overview interno',
+    description:
+      'Histórico interno da SuiteCred com arquitetura AWS, segurança, Terraform, backups e Amazon SES.',
+  },
+  twitter: {
+    title: 'SuiteCred — Overview interno',
+    description:
+      'Histórico interno da SuiteCred com arquitetura AWS, segurança, Terraform, backups e Amazon SES.',
+  },
   robots: {
     index: false,
     follow: false,
@@ -49,19 +63,6 @@ const timeline = [
   },
   {
     date: '2025',
-    title: 'Kubernetes e DevOps',
-    description: 'Planejamos a base de workloads, deploys e automação para operação corporativa.',
-    activities: [
-      'Workloads em Kubernetes/EKS planejados.',
-      'GitHub Actions, CircleCI e ArgoCD considerados na estratégia.',
-      'Pipelines CI/CD e versionamento padronizados.',
-      'Estrutura para microserviços organizada.',
-    ],
-    status: 'Estratégia DevOps estruturada.',
-    nextStep: 'Amarrar padrões de deploy, promoção e rollback.',
-  },
-  {
-    date: '2025',
     title: 'Segurança e acessos',
     description: 'Acesso, chaves, permissões e segregação foram tratados como parte da arquitetura.',
     activities: [
@@ -75,23 +76,11 @@ const timeline = [
   },
   {
     date: '2025',
-    title: 'Observabilidade Datadog',
-    description: 'Foi definida uma estratégia de observabilidade para operar e resolver problemas com dados.',
-    activities: [
-      'Dashboards, métricas, logs e alertas planejados.',
-      'APM e troubleshooting entraram no escopo.',
-      'Boas práticas de observabilidade foram definidas.',
-    ],
-    status: 'Estratégia de observabilidade definida.',
-    nextStep: 'Consolidar painéis, alertas e SLOs úteis.',
-  },
-  {
-    date: '2025',
     title: 'Arquitetura de serviços',
     description: 'Organizamos a visão de microsserviços, APIs, integrações, segurança e autenticação.',
     activities: [
       'Desenho de serviços e integrações trabalhado.',
-      'Padrões de deploy e documentação técnica definidos.',
+      'Padrões de documentação técnica definidos.',
       'Responsabilidades entre times começaram a ser formalizadas.',
     ],
     status: 'Base arquitetural organizada.',
@@ -160,8 +149,6 @@ const principles = [
 const nextSteps = [
   'Criar PROJECT_CONTEXT.md.',
   'Documentar o processo completo de solicitação SES.',
-  'Fechar padrões de Kubernetes, deploy e rollback.',
-  'Consolidar dashboards e alertas Datadog.',
   'Revisar ambientes dev, homologação e produção.',
   'Mapear backlog técnico e de produto.',
 ]
@@ -211,9 +198,8 @@ const backlogRoadmap = [
     quarter: 'Q3 2026',
     focus: 'Base SRE',
     items: [
-      'Consolidar dashboards Datadog da plataforma.',
       'Definir SLOs: disponibilidade, erro e tempo de resposta.',
-      'Revisar logs, métricas, APM e alertas críticos.',
+      'Revisar métricas e alertas críticos.',
       'Fechar documentação do processo SES.',
       'Testar restauração de backup.',
     ],
@@ -226,7 +212,7 @@ const backlogRoadmap = [
       'Criar plano de comunicação para clientes em incidentes.',
       'Simular aumento de requests antes de datas especiais.',
       'Revisar limites e reputação do AWS SES antes de datas especiais.',
-      'Revisar capacidade de banco, API, EKS e servidores.',
+      'Revisar capacidade de banco, API e servidores.',
     ],
   },
   {
@@ -237,7 +223,7 @@ const backlogRoadmap = [
       'Melhorar runbooks de suporte e operação.',
       'Criar runbook para falha de envio de e-mail.',
       'Criar rotina mensal de patch, backup e permissões.',
-      'Reduzir alertas falsos no Datadog.',
+      'Reduzir alertas falsos e ruído operacional.',
     ],
   },
   {
@@ -257,7 +243,6 @@ const backlogRoadmap = [
       'Mapear melhorias de produto com impacto no cliente.',
       'Melhorar jornada de avisos, status e suporte.',
       'Criar backlog de performance por tela e endpoint.',
-      'Revisar padrões de deploy com GitHub Actions, CircleCI e ArgoCD.',
       'Revisar custo AWS e eliminar desperdício.',
     ],
   },
@@ -294,20 +279,6 @@ const maturityMatrix = [
     adherence: 80,
     status: 'Bom',
     note: 'Projeto principal executado. Expansão multi-domínio precisa virar processo fixo.',
-  },
-  {
-    area: 'Kubernetes/DevOps',
-    level: 3,
-    adherence: 60,
-    status: 'Médio',
-    note: 'Estratégia definida. Falta consolidar padrões de deploy e rollback.',
-  },
-  {
-    area: 'Observabilidade',
-    level: 3,
-    adherence: 60,
-    status: 'Médio',
-    note: 'Datadog entrou na estratégia. Falta consolidar dashboards, APM e alertas.',
   },
   {
     area: 'Segurança',
@@ -387,8 +358,8 @@ export default function SecretPage() {
                 SuiteCred: base cloud, SRE e Amazon SES.
               </h1>
               <p className="muted-copy mt-6 max-w-2xl text-base leading-8">
-                Histórico direto do trabalho como Staff SRE / Cloud Architect: infraestrutura, Kubernetes,
-                observabilidade, automação e e-mail transacional.
+                Histórico direto do trabalho como Staff SRE / Cloud Architect: infraestrutura,
+                segurança, automação e e-mail transacional.
               </p>
             </div>
             <Card className="rounded-[2rem] p-6 md:p-7">
