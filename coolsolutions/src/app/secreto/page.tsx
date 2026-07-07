@@ -14,7 +14,7 @@ const timeline = [
   {
     date: '30/05/2025',
     title: 'Estruturação do repositório',
-    description: 'O repositório foi limpo e preparado para continuar o projeto sem sujeira no histórico.',
+    description: 'O repositório foi limpo, organizado e preparado para evolução segura da plataforma.',
     activities: [
       'Git organizado.',
       '.gitignore corrigido.',
@@ -25,75 +25,77 @@ const timeline = [
   },
   {
     date: '2025',
-    title: 'Planejamento da arquitetura AWS',
-    description: 'A direção técnica da AWS foi definida antes de sair criando recurso sem critério.',
+    title: 'Arquitetura AWS',
+    description: 'Definimos a base cloud da SuiteCred com separação de ambientes e serviços essenciais.',
     activities: [
-      'Arquitetura AWS definida.',
-      'Infraestrutura como código escolhida.',
-      'Ambientes dev, homologação e produção planejados.',
+      'Ambientes Development, Staging e Production planejados.',
+      'VPC, Subnets, Security Groups, IAM, Route53, S3, EC2, RDS e CloudWatch mapeados.',
+      'Backup e disaster recovery entraram no desenho.',
     ],
-    status: 'Caminho técnico definido.',
-    nextStep: 'Registrar as decisões principais em um documento curto.',
+    status: 'Arquitetura base definida.',
+    nextStep: 'Manter o desenho versionado e fácil de consultar.',
   },
   {
     date: '2025',
-    title: 'Infraestrutura AWS',
-    description: 'Foram escolhidos os serviços AWS necessários para a base do projeto.',
+    title: 'Terraform e padronização',
+    description: 'A infraestrutura foi pensada como código para ser reproduzível e auditável.',
     activities: [
-      'VPC, EC2, RDS, S3, IAM, Route53 e Security Groups mapeados.',
-      'Monitoramento com CloudWatch previsto.',
-      'Backups incluídos no desenho.',
+      'Terraform definido como base de provisionamento.',
+      'Separação por ambiente planejada.',
+      'Módulos, variáveis e estados entraram no padrão técnico.',
     ],
-    status: 'Peças principais mapeadas.',
-    nextStep: 'Transformar o desenho em Terraform por ambiente.',
+    status: 'IaC definida como prática central.',
+    nextStep: 'Completar módulos e convenções por ambiente.',
   },
   {
     date: '2025',
-    title: 'Planejamento Terraform',
-    description: 'Terraform foi escolhido para criar infraestrutura de forma repetível e controlada.',
+    title: 'Kubernetes e DevOps',
+    description: 'Planejamos a base de workloads, deploys e automação para operação corporativa.',
     activities: [
-      'Infraestrutura versionada planejada.',
-      'Ambientes separados.',
-      'Menos configuração manual.',
+      'Workloads em Kubernetes/EKS planejados.',
+      'GitHub Actions, CircleCI e ArgoCD considerados na estratégia.',
+      'Pipelines CI/CD e versionamento padronizados.',
+      'Estrutura para microserviços organizada.',
     ],
-    status: 'IaC definida como padrão.',
-    nextStep: 'Padronizar módulos, variáveis e estados.',
+    status: 'Estratégia DevOps estruturada.',
+    nextStep: 'Amarrar padrões de deploy, promoção e rollback.',
   },
   {
     date: '2025',
-    title: 'Segurança e controle de acesso',
-    description: 'Acesso, chaves e permissões foram tratados como parte central da infraestrutura.',
+    title: 'Segurança e acessos',
+    description: 'Acesso, chaves, permissões e segregação foram tratados como parte da arquitetura.',
     activities: [
       'IAM e permissões planejados.',
       'SSH e keypairs revisados.',
-      'Ambientes separados.',
+      'Segregação de ambientes definida.',
+      'Boas práticas de segurança incorporadas.',
     ],
     status: 'Segurança tratada desde a base.',
     nextStep: 'Aplicar acesso mínimo por ambiente.',
   },
   {
     date: '2025',
-    title: 'Organização modular do projeto',
-    description: 'O projeto foi pensado em partes menores para ficar mais fácil de manter.',
+    title: 'Observabilidade Datadog',
+    description: 'Foi definida uma estratégia de observabilidade para operar e resolver problemas com dados.',
     activities: [
-      'Infraestrutura separada da aplicação.',
-      'Organização por módulos.',
-      'Código pensado para crescer sem virar bagunça.',
+      'Dashboards, métricas, logs e alertas planejados.',
+      'APM e troubleshooting entraram no escopo.',
+      'Boas práticas de observabilidade foram definidas.',
     ],
-    status: 'Estrutura modular definida.',
-    nextStep: 'Registrar nomes, pastas e responsabilidades.',
+    status: 'Estratégia de observabilidade definida.',
+    nextStep: 'Consolidar painéis, alertas e SLOs úteis.',
   },
   {
     date: '2025',
-    title: 'Documentação técnica',
-    description: 'A documentação foi iniciada para ninguém depender de memória ou conversa antiga.',
+    title: 'Arquitetura de serviços',
+    description: 'Organizamos a visão de microsserviços, APIs, integrações, segurança e autenticação.',
     activities: [
-      'Arquitetura registrada.',
-      'Decisões técnicas anotadas.',
-      'Contexto do projeto preservado.',
+      'Desenho de serviços e integrações trabalhado.',
+      'Padrões de deploy e documentação técnica definidos.',
+      'Responsabilidades entre times começaram a ser formalizadas.',
     ],
-    status: 'Documentação iniciada.',
-    nextStep: 'Criar um PROJECT_CONTEXT.md direto e completo.',
+    status: 'Base arquitetural organizada.',
+    nextStep: 'Transformar decisões em documentação operacional simples.',
   },
   {
     date: '12/12/2025',
@@ -119,30 +121,100 @@ const timeline = [
     status: 'Backups executando corretamente.',
     nextStep: 'Criar rotina de revisão e teste de restauração.',
   },
+  {
+    date: '2026',
+    title: 'Amazon SES - fase 1',
+    description: 'Provisionamos o Amazon SES para o domínio da SuiteCred e tiramos o envio do campo improvisado.',
+    activities: [
+      'Conta AWS dedicada e SES configurados.',
+      'Solicitação de saída do Sandbox conduzida.',
+      'SMTP, SPF, DKIM, DMARC e DNS configurados.',
+      'Testes de envio e documentação técnica realizados.',
+    ],
+    status: 'Projeto SES virou um dos principais blocos de infraestrutura.',
+    nextStep: 'Manter documentação, limites, reputação e evidências de envio atualizados.',
+  },
+  {
+    date: '2026',
+    title: 'Amazon SES - expansão',
+    description: 'O SES evoluiu para suportar múltiplos domínios com processo mais padronizado.',
+    activities: [
+      'Planejamento para aproximadamente 6 domínios.',
+      'Isolamento de identidades por domínio.',
+      'Automação via Terraform prevista.',
+      'Onboarding de novos domínios padronizado.',
+    ],
+    status: 'Expansão planejada para reduzir dependência manual do time SRE.',
+    nextStep: 'Fechar checklist de solicitação e esteira de provisionamento.',
+  },
 ]
 
 const principles = [
   'Mudar pouco por vez.',
   'Não quebrar o que já funciona.',
   'Documentar decisão importante.',
+  'Automatizar o que for repetitivo.',
   'Manter código simples.',
 ]
 
 const nextSteps = [
   'Criar PROJECT_CONTEXT.md.',
-  'Fechar decisões de arquitetura.',
-  'Mapear backlog técnico e de produto.',
+  'Documentar o processo completo de solicitação SES.',
+  'Fechar padrões de Kubernetes, deploy e rollback.',
+  'Consolidar dashboards e alertas Datadog.',
   'Revisar ambientes dev, homologação e produção.',
+  'Mapear backlog técnico e de produto.',
+]
+
+const sesProjects = [
+  {
+    title: 'Fase 1 - domínio SuiteCred',
+    items: [
+      'Conta AWS dedicada criada.',
+      'Amazon SES configurado.',
+      'Saída do Sandbox solicitada.',
+      'SMTP, SPF, DKIM, DMARC e DNS configurados.',
+      'Testes de envio e documentação técnica realizados.',
+    ],
+  },
+  {
+    title: 'Expansão multi-domínio',
+    items: [
+      'Planejamento para cerca de 6 domínios.',
+      'Identidades isoladas por domínio.',
+      'Automação via Terraform prevista.',
+      'Onboarding de novos domínios padronizado.',
+    ],
+  },
+  {
+    title: 'Solicitação padrão',
+    items: [
+      'Domínio, ambiente e aplicação informados no card.',
+      'Remetente, finalidade e volume esperado definidos.',
+      'Responsáveis e uso de SMTP ou SDK documentados.',
+      'Responsável pelo DNS identificado antes do provisionamento.',
+    ],
+  },
+  {
+    title: 'Operação e entregabilidade',
+    items: [
+      'Bounce, complaint e rejeição acompanhados.',
+      'Reputação e limites de envio entram no monitoramento.',
+      'Evidências de envio ficam disponíveis para investigação.',
+      'Runbook para falha de envio precisa ficar formalizado.',
+    ],
+  },
 ]
 
 const backlogRoadmap = [
   {
     quarter: 'Q3 2026',
-    focus: 'Base operacional',
+    focus: 'Base SRE',
     items: [
-      'Criar painel simples de saúde da plataforma.',
+      'Consolidar dashboards Datadog da plataforma.',
       'Definir SLOs: disponibilidade, erro e tempo de resposta.',
-      'Revisar logs, métricas e alertas críticos.',
+      'Revisar logs, métricas, APM e alertas críticos.',
+      'Fechar documentação do processo SES.',
       'Testar restauração de backup.',
     ],
   },
@@ -153,17 +225,19 @@ const backlogRoadmap = [
       'Preparar operação para Black Friday, Natal e fechamento do ano.',
       'Criar plano de comunicação para clientes em incidentes.',
       'Simular aumento de requests antes de datas especiais.',
-      'Revisar capacidade de banco, API e servidores.',
+      'Revisar limites e reputação do AWS SES antes de datas especiais.',
+      'Revisar capacidade de banco, API, EKS e servidores.',
     ],
   },
   {
     quarter: 'Q1 2027',
-    focus: 'Estabilidade',
+    focus: 'Governança operacional',
     items: [
       'Revisar incidentes de 2026 e corrigir causas reais.',
       'Melhorar runbooks de suporte e operação.',
+      'Criar runbook para falha de envio de e-mail.',
       'Criar rotina mensal de patch, backup e permissões.',
-      'Reduzir alertas falsos e barulho operacional.',
+      'Reduzir alertas falsos no Datadog.',
     ],
   },
   {
@@ -173,7 +247,7 @@ const backlogRoadmap = [
       'Planejar crescimento do número de requests.',
       'Fazer teste de carga da API e da Plataforma.',
       'Ajustar banco, cache e filas se o volume crescer.',
-      'Definir limite claro para escalar infraestrutura.',
+      'Definir gatilhos claros para escalar infraestrutura e workloads.',
     ],
   },
   {
@@ -183,6 +257,7 @@ const backlogRoadmap = [
       'Mapear melhorias de produto com impacto no cliente.',
       'Melhorar jornada de avisos, status e suporte.',
       'Criar backlog de performance por tela e endpoint.',
+      'Revisar padrões de deploy com GitHub Actions, CircleCI e ArgoCD.',
       'Revisar custo AWS e eliminar desperdício.',
     ],
   },
@@ -200,11 +275,39 @@ const backlogRoadmap = [
 
 const maturityMatrix = [
   {
-    area: 'Backups',
+    area: 'AWS base',
     level: 4,
     adherence: 80,
     status: 'Bom',
-    note: 'Existe validação. Falta rotina fixa de restauração.',
+    note: 'Arquitetura e serviços principais foram definidos.',
+  },
+  {
+    area: 'Terraform',
+    level: 4,
+    adherence: 80,
+    status: 'Bom',
+    note: 'IaC foi definida como padrão. Falta fechar módulos e convenções.',
+  },
+  {
+    area: 'Amazon SES',
+    level: 4,
+    adherence: 80,
+    status: 'Bom',
+    note: 'Projeto principal executado. Expansão multi-domínio precisa virar processo fixo.',
+  },
+  {
+    area: 'Kubernetes/DevOps',
+    level: 3,
+    adherence: 60,
+    status: 'Médio',
+    note: 'Estratégia definida. Falta consolidar padrões de deploy e rollback.',
+  },
+  {
+    area: 'Observabilidade',
+    level: 3,
+    adherence: 60,
+    status: 'Médio',
+    note: 'Datadog entrou na estratégia. Falta consolidar dashboards, APM e alertas.',
   },
   {
     area: 'Segurança',
@@ -214,32 +317,32 @@ const maturityMatrix = [
     note: 'Base definida. Falta revisar acesso mínimo por ambiente.',
   },
   {
-    area: 'Observabilidade',
-    level: 2,
-    adherence: 40,
-    status: 'Atenção',
-    note: 'Precisa de painel, alertas úteis e SLOs simples.',
+    area: 'Documentação',
+    level: 4,
+    adherence: 80,
+    status: 'Bom',
+    note: 'Vários documentos foram produzidos. Falta centralizar o contexto final.',
+  },
+  {
+    area: 'Operação',
+    level: 3,
+    adherence: 60,
+    status: 'Médio',
+    note: 'Runbooks, calendário operacional e rotina de revisão precisam fechar.',
   },
   {
     area: 'Escala',
     level: 2,
     adherence: 40,
     status: 'Atenção',
-    note: 'Precisa testar carga e definir limite de crescimento.',
+    note: 'Precisa testar carga e definir limites de crescimento.',
   },
   {
-    area: 'Documentação',
-    level: 3,
-    adherence: 60,
-    status: 'Médio',
-    note: 'Contexto iniciado. Falta PROJECT_CONTEXT.md completo.',
-  },
-  {
-    area: 'Operação',
+    area: 'Disaster recovery',
     level: 2,
     adherence: 40,
     status: 'Atenção',
-    note: 'Faltam runbooks, calendário operacional e rotina de revisão.',
+    note: 'Backup foi planejado e validado. Falta teste recorrente de recuperação.',
   },
 ]
 
@@ -281,10 +384,11 @@ export default function SecretPage() {
             <div>
               <p className="eyebrow text-[10px] text-[var(--muted)]">Área interna / SuiteCred</p>
               <h1 className="balanced-title mt-4 max-w-4xl text-4xl font-semibold tracking-[-0.06em] text-[var(--foreground)] md:text-6xl">
-                SuiteCred: histórico simples do que importa.
+                SuiteCred: base cloud, SRE e Amazon SES.
               </h1>
               <p className="muted-copy mt-6 max-w-2xl text-base leading-8">
-                O que foi feito, o estado atual e o próximo passo. Sem enfeite.
+                Histórico direto do trabalho como Staff SRE / Cloud Architect: infraestrutura, Kubernetes,
+                observabilidade, automação e e-mail transacional.
               </p>
             </div>
             <Card className="rounded-[2rem] p-6 md:p-7">
@@ -293,7 +397,7 @@ export default function SecretPage() {
                 {timeline.length} registros
               </p>
               <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-                Datas com apenas o ano são aproximadas.
+                O Amazon SES foi um dos principais projetos de infraestrutura realizados.
               </p>
             </Card>
           </div>
@@ -354,6 +458,31 @@ export default function SecretPage() {
                 <BulletList items={nextSteps} />
               </div>
             </Card>
+          </div>
+        </Section>
+
+        <Section className="pt-0">
+          <div>
+            <p className="eyebrow text-[10px] text-[var(--muted)]">Projetos SES</p>
+            <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-[-0.05em] text-[var(--foreground)] md:text-4xl">
+              Amazon SES foi projeto principal.
+            </h2>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)]">
+              O trabalho saiu de um domínio inicial e evoluiu para um modelo multi-domínio,
+              com solicitação padronizada e execução pelo time SRE.
+            </p>
+            <div className="mt-8 grid gap-5 lg:grid-cols-2">
+              {sesProjects.map((project) => (
+                <Card key={project.title} className="rounded-[2rem] p-6 md:p-8">
+                  <h3 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--foreground)]">
+                    {project.title}
+                  </h3>
+                  <div className="mt-5">
+                    <BulletList items={project.items} />
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
         </Section>
 
