@@ -23,11 +23,15 @@ npm run lint
 npm run test
 ```
 
-### Deploy na Vercel
+### Deploy
 
-1. Importe o repositório na Vercel
-2. Framework: Next.js
-3. Build: `npm run build` | Output: `.vercel/output` (padrão Next)
+O deploy é automático via GitHub Actions (`.github/workflows/master.yml`) a cada push na `master`:
+
+1. `npm ci` e `npm run build` em `coolsolutions/` (gera o export estático em `out/`);
+2. verifica `index.html`, `404.html` e `sitemap.xml`;
+3. publica `out/` via SFTP em `public_html/` (e `public_html/workflows/`).
+
+O `next.config.mjs` usa `output: 'export'`, então `npm run build` já produz o site estático em `out/`.
 
 ### SEO e A11y
 
